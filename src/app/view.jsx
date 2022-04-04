@@ -4,7 +4,7 @@ import "./style.css";
 const App = () => {
   const { handleGetFile, detailLink } = useFile();
 
-  const hasDetailLink = Object.values(detailLink).length !== 0;
+  const hasDetailLink = Object.values(detailLink).every(Boolean)
 
   return (
     <div className="app-main">
@@ -25,9 +25,9 @@ const App = () => {
             Detail mock ⚙️
           </a>
         )}
-        <div className="app-main__detail-download-list-block">
+        {/* <div className="app-main__detail-download-list-block">
           <p>List Mock:</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
