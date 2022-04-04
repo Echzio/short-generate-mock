@@ -4,7 +4,7 @@ import "./style.css";
 const App = () => {
   const { handleGetFile, detailLink } = useFile();
 
-  const hasDetailLink = Object.keys(detailLink).length !== 0;
+  const hasDetailLink = Object.values(detailLink).length !== 0;
 
   return (
     <div className="app-main">
